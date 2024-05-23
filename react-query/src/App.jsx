@@ -1,12 +1,14 @@
+import TryUseQuery from "./components/TryUseQuery"
 
-// "https://jsonplaceholder.typicode.com/todos/100"
+
 function App() {
-  
-
   return (
+
+    //just Basics
     <>
-      <h1 className="text-red-600 underline">hello</h1>
-      
+    
+    <TryUseQuery/>  
+
     </>
   )
 }
