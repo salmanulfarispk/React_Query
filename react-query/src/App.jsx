@@ -8,7 +8,7 @@ function App() {
     //just Basics
     <>
     <div>
-    {/* <TryUseQuery/>   */}
+    <TryUseQuery/>  
     <TryUseMutation/>
     </div>
     </>
