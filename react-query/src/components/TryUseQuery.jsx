@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query"
 
 export default function TryUseQuery() {
 
- const {data:todoDatas,error,isLoading}=useQuery({queryKey:["todo"],
+ const {data:todoDatas,error,isLoading}=useQuery({queryKey:["todos"],
 queryFn:async()=>{
 const res=await fetch("https://jsonplaceholder.typicode.com/todos")
 const data=await res.json()

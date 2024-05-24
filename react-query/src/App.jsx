@@ -1,3 +1,4 @@
+import TryUseMutation from "./components/TryUseMutation"
 import TryUseQuery from "./components/TryUseQuery"
 
 
@@ -6,9 +7,10 @@ function App() {
 
     //just Basics
     <>
-    
-    <TryUseQuery/>  
-
+    <div>
+    {/* <TryUseQuery/>   */}
+    <TryUseMutation/>
+    </div>
     </>
   )
 }
