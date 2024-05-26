@@ -5,7 +5,9 @@ import './index.css'
 import {QueryClient,QueryClientProvider} from "@tanstack/react-query"
 
 
-const queryClient=new QueryClient({})      //in this page firstly defining providers
+const queryClient=new QueryClient({
+  defaultOptions: {queries: {gcTime: 10* (60 *1000)} }, //If the data is not accessed within the 10-minute gcTime window, it will be removed from the cache to free up memory.
+})      //in this page firstly defining providers
   
 ReactDOM.createRoot(document.getElementById('root')).render(   
   <React.StrictMode>
