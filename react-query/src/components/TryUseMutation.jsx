@@ -7,6 +7,7 @@ export default function TryUseMutation() {
 
  const {mutation:newPosting,isPending,isError,error}=useMutation({mutationFn:async(newPost)=>{
       const res=await fetch("https://jsonplaceholder.typicode.com/todos",{
+        method:"POST",
         headers: {
             "Content-Type": "application/json",
           },
@@ -17,7 +18,7 @@ export default function TryUseMutation() {
       return data;
     },
     onSuccess:()=>{
-       queryClient.invalidateQueries("todos")   // Invalidate the 'todos' query to refetch the todos
+       queryClient.invalidateQueries("posts")   // Invalidate the 'posts' query to refetch the posts and 'posts' is set as useQuery({queryKey:["posts"] in post dispalying page.
     },
     onError: (error) => {
         console.error('Error creating new todo:', error);
